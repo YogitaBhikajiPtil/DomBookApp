@@ -1,9 +1,12 @@
 const loggedIn = localStorage.getItem('loggedIn');
 if(loggedIn !== "admin@Masai.com") {
+    alert("Admin Not Logged In")
     window.location.href = "index.html";
 }
 
-const baseURL = "http://localhost:3000/books";
+//http://localhost:3000/books
+
+const baseURL = "https://lyrical-honeysuckle-mandrill.glitch.me";
 const form = document.getElementById("bookForm");
 const bookList = document.getElementById("bookList");
 
@@ -20,7 +23,7 @@ form.onsubmit =async function(e) {
         headers:{
             'content-type':'application/json'
         },
-        body:JSON,stringify(book),
+        body:JSON.stringify(book),
     });
 
     if(res.ok){

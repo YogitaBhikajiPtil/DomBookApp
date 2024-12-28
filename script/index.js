@@ -1,5 +1,6 @@
 let adminform =document.getElementById("admin-form");
 adminform.addEventListener("submit",function(){
+    event.preventDefault();
     let email=Document.getElementById("email")
     let password=Document.getElementById("password")
 
@@ -16,6 +17,7 @@ adminform.addEventListener("submit",function(){
 
 let userform = document.getElementById("user-form");
 userform.addEventListener("submit",function(){
+    event.preventDefault();
     let email=Document.getElementById("email")
     let password=Document.getElementById("password")
 
